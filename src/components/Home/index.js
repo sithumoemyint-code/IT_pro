@@ -1,0 +1,5 @@
+export { default as Language } from './Category/Language'
+export { default as Buttom } from './Buttom/Buttom'
+export { default as Footer } from './Footer/Footer'
+export { default as Feedback }  from './Feedback/Feedback'
+export { default as Join }  from './Join/Join'

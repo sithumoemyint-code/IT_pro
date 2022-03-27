@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+
+/* Navbar style css start */
+.wrapper{
+    height: 75px;
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: rgba(156, 159, 161, 0.2) 0px 8px 24px;
+}
+
+.shrink {
+    height: 66px;
+    transition: .8s ease-out;
+}
+
+.shrink .rightLink{
+    color: #fafafa;
+}
+
+.shrink_color{
+    background-color: #1B1818;
+    transition: .8s ease-out;
+}
+
+.menu_icon{
+    display: none;
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav_item{
+    height: 100%;
+}
+
+.nav_links{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+.rightLink{
+    color: gray;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.rightLink:hover{
+    color: aqua;
+    transition: all 0.5s ease;
+}
+  
+
+@media screen and (max-width: 960px) {
+    .menu_icon{
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .shrink .menu_icon i{
+        color: #FAFAFA;
+    }
+
+    .nav_menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 65px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        padding-top: 40px;
+    }
+
+    .nav_menu.active{
+        background: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+    }
+
+    .nav_links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+    
+    .nav_links:hover {
+        background-color: #fff;
+        color: #242424;
+        border-radius: 0;
+    }
+
+    .nav_item{
+        height: 50px;
+        text-align: center;
+    }
+
+    .rightLink{
+        padding: 25px;
+        margin-top: 20px;
+    }
+}
+
+/* Navbar style css end */
+
+/* Slider style css from Home.jsx page start  */
+
+
+.slider{
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all .5s ease;
+}
+
+.slide img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    position: absolute;
+    top: 23rem;
+    left: 6rem;
+    opacity: 0;
+    width: 50%;
+    padding: 3rem;
+    background: rgba(0, 0, 0, .3);
+    animation: slide-up 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    /* visibility: hidden; */
+}
+
+.content h2{
+    color: rgb(252, 246, 246);
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 3px;
+}
+
+.content p{
+    color: rgb(248, 240, 240);
+    font-family: 'Exo', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+@keyframes slide-up{
+    0% {
+        visibility: visible;
+        top: 23rem;
+    }
+    100% {
+        visibility: visible;
+        top: 17rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content{
+        width: 80%;
+    }
+}
+
+.content > *{
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.current{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.current .content{
+    opacity: 1;
+}
+
+.arrow {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    z-index: 9;
+}
+
+.arrow:hover{
+    background: #fff;
+    color: #777;
+}
+
+.next{
+    right: 1.5rem;
+}
+
+.prev{
+    left: 1.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .content{
+        padding: 1.5rem;
+        margin: auto;
+        width: 70%;
+        left: 0%;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .slide img{
+        width: 100%;
+    }
+
+    .content{
+        padding: 1rem;
+    }
+
+    .content h2{
+        font-size: 18px;
+    }
+    
+    .content p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .slide img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Slider style css from Home.jsx page end  */
+
+
+/* Feedback style css from Reive.jsx page start  */
+
+article{
+    opacity: 0;
+    transition: all 0.6s linear;
+}
+
+article.activeSlide {
+    opacity: 1;
+}
+
+/* Feedback style css from Reive.jsx page end  */

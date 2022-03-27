@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+
+.container{
+    background: #D7D7D7;
+}
+
+.text_center{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(41, 38, 38);
+    font-family: 'Questrial', sans-serif;
+    font-size: 34px;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.underline {
+    height: 0.25rem;
+    width: 5rem;
+    background: hsl(205, 78%, 60%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steve_container{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px 0;
+}
+
+.left{
+    flex: 1;
+}
+
+.left p{
+    font-family: 'Exo', sans-serif;
+    color: #1E1B1B;
+}
+
+.left h2{
+    font-family: 'Questrial', sans-serif;
+    padding-left: 12px;
+    margin-bottom: -15px;
+    color: hsl(205, 78%, 60%);
+}
+
+.left h4{
+    font-family: 'Exo', sans-serif;
+    padding-left: 16px;
+    color: #867878;
+}
+
+.right{
+    flex: 1;
+}
+
+.right_container{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.right_container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: hsl(205, 78%, 60%);
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    border-radius: 50%;
+}
+
+.person_img {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .steve_container{
+        flex-direction: column;
+    }
+
+    .left h2{
+        text-align: center;
+    }
+
+    .left h4{
+        text-align: center;
+    }
+}

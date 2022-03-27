@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.create {
+    width: 95vw;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.create label {
+    text-align: left;
+    display: block;
+}
+
+.create h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 30px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.create label{
+    color: rgb(41, 38, 38);
+    font-family: 'Exo', sans-serif;
+}
+
+.create input, .create textarea, .create select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.create button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 470px) {
+    .create {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .create {
+        max-width: 300px;
+    }
+}

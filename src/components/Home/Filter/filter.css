@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300&display=swap');
+
+.filter_container{
+    display: flex;
+    justify-content: center;
+}
+
+.filter_container button{
+    min-width: 5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: white;
+    color: rgb(65, 98, 168);
+    border-radius: 1rem;
+    border: 2px solid rgb(28, 36, 53);
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 20px;
+    font-family: 'Exo', sans-serif;
+    letter-spacing: .1rem;
+}
+  
+button.active{
+    background: rgb(65, 98, 168);
+    color: white;
+}
