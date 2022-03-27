@@ -100,7 +100,7 @@ const Home = () => {
                 })}       
             </div>
             <div className={HomeCss.language_container}>
-                <h2 className={HomeCss.text_center}>Course and me</h2>
+                <h2 className={HomeCss.text_center}>Course</h2>
                 <div className={HomeCss.underline} />
                 <Filter select={select} filterItems={filterItems} />
                 <motion.div layout className={HomeCss.main_container}>
