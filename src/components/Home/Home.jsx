@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { sliderData, languages } from './slider-data'
 import { Language, Buttom, Footer, Feedback} from '../Home'
@@ -32,17 +32,16 @@ const Home = () => {
     let slideInterval
     let intervalTime = 6000
 
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
         setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1)
-    }
+    }, [currentSlide, slideLength])
 
-    const prevSlide = () => {
+    const prevSlide = useCallback(() => {
         setCurrentSlide(currentSlide === 0 ? slideLength - 1 : currentSlide - 1)
-    }
+    }, [currentSlide, slideLength])
 
     useEffect(() => {
-        if (autoScroll) 
-            auto()
+        if (autoScroll) auto()
         return () => clearInterval(slideInterval)
     }, [currentSlide])
 
