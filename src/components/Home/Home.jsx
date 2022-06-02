@@ -58,6 +58,8 @@ const Home = () => {
         setLang(languages)
     }
 
+    console.log(languages)
+
     const filterItems = (category = null) => {
         if (category === 'all') {
             setLang(languages)
@@ -67,6 +69,7 @@ const Home = () => {
         
         if (category != null) {
             const newItems = languages.filter(language => language.category === category)
+            console.log(newItems)
             setLang(newItems)
             setSelect(category)
         }
